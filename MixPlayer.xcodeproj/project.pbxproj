@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16B455B01DA6367F00500BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455AF1DA6367F00500BCF /* AppDelegate.swift */; };
+		16B455B21DA6367F00500BCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455B11DA6367F00500BCF /* ViewController.swift */; };
+		16B455B51DA6367F00500BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B455B31DA6367F00500BCF /* Main.storyboard */; };
+		16B455B71DA6367F00500BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B455B61DA6367F00500BCF /* Assets.xcassets */; };
+		16B455BA1DA6367F00500BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B455B81DA6367F00500BCF /* LaunchScreen.storyboard */; };
+		16B455C51DA6367F00500BCF /* MixPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455C41DA6367F00500BCF /* MixPlayerTests.swift */; };
+		16B455D01DA6367F00500BCF /* MixPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455CF1DA6367F00500BCF /* MixPlayerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16B455C11DA6367F00500BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16B455A41DA6367F00500BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16B455AB1DA6367F00500BCF;
+			remoteInfo = MixPlayer;
+		};
+		16B455CC1DA6367F00500BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16B455A41DA6367F00500BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16B455AB1DA6367F00500BCF;
+			remoteInfo = MixPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16B455AC1DA6367F00500BCF /* MixPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B455AF1DA6367F00500BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16B455B11DA6367F00500BCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16B455B41DA6367F00500BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16B455B61DA6367F00500BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16B455B91DA6367F00500BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16B455BB1DA6367F00500BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B455C01DA6367F00500BCF /* MixPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B455C41DA6367F00500BCF /* MixPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixPlayerTests.swift; sourceTree = "<group>"; };
+		16B455C61DA6367F00500BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B455CB1DA6367F00500BCF /* MixPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B455CF1DA6367F00500BCF /* MixPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixPlayerUITests.swift; sourceTree = "<group>"; };
+		16B455D11DA6367F00500BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16B455A91DA6367F00500BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16B455BD1DA6367F00500BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16B455C81DA6367F00500BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16B455A31DA6367F00500BCF = {
+			isa = PBXGroup;
+			children = (
+				16B455AE1DA6367F00500BCF /* MixPlayer */,
+				16B455C31DA6367F00500BCF /* MixPlayerTests */,
+				16B455CE1DA6367F00500BCF /* MixPlayerUITests */,
+				16B455AD1DA6367F00500BCF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16B455AD1DA6367F00500BCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16B455AC1DA6367F00500BCF /* MixPlayer.app */,
+				16B455C01DA6367F00500BCF /* MixPlayerTests.xctest */,
+				16B455CB1DA6367F00500BCF /* MixPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16B455AE1DA6367F00500BCF /* MixPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				16B455AF1DA6367F00500BCF /* AppDelegate.swift */,
+				16B455B11DA6367F00500BCF /* ViewController.swift */,
+				16B455B31DA6367F00500BCF /* Main.storyboard */,
+				16B455B61DA6367F00500BCF /* Assets.xcassets */,
+				16B455B81DA6367F00500BCF /* LaunchScreen.storyboard */,
+				16B455BB1DA6367F00500BCF /* Info.plist */,
+			);
+			path = MixPlayer;
+			sourceTree = "<group>";
+		};
+		16B455C31DA6367F00500BCF /* MixPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				16B455C41DA6367F00500BCF /* MixPlayerTests.swift */,
+				16B455C61DA6367F00500BCF /* Info.plist */,
+			);
+			path = MixPlayerTests;
+			sourceTree = "<group>";
+		};
+		16B455CE1DA6367F00500BCF /* MixPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16B455CF1DA6367F00500BCF /* MixPlayerUITests.swift */,
+				16B455D11DA6367F00500BCF /* Info.plist */,
+			);
+			path = MixPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16B455AB1DA6367F00500BCF /* MixPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16B455D41DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayer" */;
+			buildPhases = (
+				16B455A81DA6367F00500BCF /* Sources */,
+				16B455A91DA6367F00500BCF /* Frameworks */,
+				16B455AA1DA6367F00500BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MixPlayer;
+			productName = MixPlayer;
+			productReference = 16B455AC1DA6367F00500BCF /* MixPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16B455BF1DA6367F00500BCF /* MixPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16B455D71DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayerTests" */;
+			buildPhases = (
+				16B455BC1DA6367F00500BCF /* Sources */,
+				16B455BD1DA6367F00500BCF /* Frameworks */,
+				16B455BE1DA6367F00500BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16B455C21DA6367F00500BCF /* PBXTargetDependency */,
+			);
+			name = MixPlayerTests;
+			productName = MixPlayerTests;
+			productReference = 16B455C01DA6367F00500BCF /* MixPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16B455CA1DA6367F00500BCF /* MixPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16B455DA1DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayerUITests" */;
+			buildPhases = (
+				16B455C71DA6367F00500BCF /* Sources */,
+				16B455C81DA6367F00500BCF /* Frameworks */,
+				16B455C91DA6367F00500BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16B455CD1DA6367F00500BCF /* PBXTargetDependency */,
+			);
+			name = MixPlayerUITests;
+			productName = MixPlayerUITests;
+			productReference = 16B455CB1DA6367F00500BCF /* MixPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16B455A41DA6367F00500BCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = DDDrop;
+				TargetAttributes = {
+					16B455AB1DA6367F00500BCF = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					16B455BF1DA6367F00500BCF = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 16B455AB1DA6367F00500BCF;
+					};
+					16B455CA1DA6367F00500BCF = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 16B455AB1DA6367F00500BCF;
+					};
+				};
+			};
+			buildConfigurationList = 16B455A71DA6367F00500BCF /* Build configuration list for PBXProject "MixPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16B455A31DA6367F00500BCF;
+			productRefGroup = 16B455AD1DA6367F00500BCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16B455AB1DA6367F00500BCF /* MixPlayer */,
+				16B455BF1DA6367F00500BCF /* MixPlayerTests */,
+				16B455CA1DA6367F00500BCF /* MixPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16B455AA1DA6367F00500BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B455BA1DA6367F00500BCF /* LaunchScreen.storyboard in Resources */,
+				16B455B71DA6367F00500BCF /* Assets.xcassets in Resources */,
+				16B455B51DA6367F00500BCF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16B455BE1DA6367F00500BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16B455C91DA6367F00500BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16B455A81DA6367F00500BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B455B21DA6367F00500BCF /* ViewController.swift in Sources */,
+				16B455B01DA6367F00500BCF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16B455BC1DA6367F00500BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B455C51DA6367F00500BCF /* MixPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16B455C71DA6367F00500BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B455D01DA6367F00500BCF /* MixPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16B455C21DA6367F00500BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16B455AB1DA6367F00500BCF /* MixPlayer */;
+			targetProxy = 16B455C11DA6367F00500BCF /* PBXContainerItemProxy */;
+		};
+		16B455CD1DA6367F00500BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16B455AB1DA6367F00500BCF /* MixPlayer */;
+			targetProxy = 16B455CC1DA6367F00500BCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16B455B31DA6367F00500BCF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16B455B41DA6367F00500BCF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16B455B81DA6367F00500BCF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16B455B91DA6367F00500BCF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16B455D21DA6367F00500BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16B455D31DA6367F00500BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16B455D51DA6367F00500BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MixPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		16B455D61DA6367F00500BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MixPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		16B455D81DA6367F00500BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MixPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MixPlayer.app/MixPlayer";
+			};
+			name = Debug;
+		};
+		16B455D91DA6367F00500BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MixPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MixPlayer.app/MixPlayer";
+			};
+			name = Release;
+		};
+		16B455DB1DA6367F00500BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MixPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MixPlayer;
+			};
+			name = Debug;
+		};
+		16B455DC1DA6367F00500BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MixPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MixPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16B455A71DA6367F00500BCF /* Build configuration list for PBXProject "MixPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16B455D21DA6367F00500BCF /* Debug */,
+				16B455D31DA6367F00500BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16B455D41DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16B455D51DA6367F00500BCF /* Debug */,
+				16B455D61DA6367F00500BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16B455D71DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16B455D81DA6367F00500BCF /* Debug */,
+				16B455D91DA6367F00500BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16B455DA1DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16B455DB1DA6367F00500BCF /* Debug */,
+				16B455DC1DA6367F00500BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16B455A41DA6367F00500BCF /* Project object */;
+}
