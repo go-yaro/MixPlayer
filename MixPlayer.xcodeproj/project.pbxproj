@@ -14,6 +14,9 @@
 		16B455BA1DA6367F00500BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B455B81DA6367F00500BCF /* LaunchScreen.storyboard */; };
 		16B455C51DA6367F00500BCF /* MixPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455C41DA6367F00500BCF /* MixPlayerTests.swift */; };
 		16B455D01DA6367F00500BCF /* MixPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455CF1DA6367F00500BCF /* MixPlayerUITests.swift */; };
+		16B455E11DA63BF500500BCF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B455DF1DA63BF500500BCF /* ReactiveCocoa.framework */; };
+		16B455E21DA63BF500500BCF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B455E01DA63BF500500BCF /* Result.framework */; };
+		16B455E41DA63C2300500BCF /* MixPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455E31DA63C2300500BCF /* MixPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		16B455CB1DA6367F00500BCF /* MixPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B455CF1DA6367F00500BCF /* MixPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixPlayerUITests.swift; sourceTree = "<group>"; };
 		16B455D11DA6367F00500BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B455DF1DA63BF500500BCF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		16B455E01DA63BF500500BCF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		16B455E31DA63C2300500BCF /* MixPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B455E11DA63BF500500BCF /* ReactiveCocoa.framework in Frameworks */,
+				16B455E21DA63BF500500BCF /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +88,7 @@
 				16B455AE1DA6367F00500BCF /* MixPlayer */,
 				16B455C31DA6367F00500BCF /* MixPlayerTests */,
 				16B455CE1DA6367F00500BCF /* MixPlayerUITests */,
+				16B455DD1DA6391400500BCF /* Frameworks */,
 				16B455AD1DA6367F00500BCF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +112,7 @@
 				16B455B61DA6367F00500BCF /* Assets.xcassets */,
 				16B455B81DA6367F00500BCF /* LaunchScreen.storyboard */,
 				16B455BB1DA6367F00500BCF /* Info.plist */,
+				16B455E31DA63C2300500BCF /* MixPlayer.swift */,
 			);
 			path = MixPlayer;
 			sourceTree = "<group>";
@@ -125,6 +135,15 @@
 			path = MixPlayerUITests;
 			sourceTree = "<group>";
 		};
+		16B455DD1DA6391400500BCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16B455DF1DA63BF500500BCF /* ReactiveCocoa.framework */,
+				16B455E01DA63BF500500BCF /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +154,7 @@
 				16B455A81DA6367F00500BCF /* Sources */,
 				16B455A91DA6367F00500BCF /* Frameworks */,
 				16B455AA1DA6367F00500BCF /* Resources */,
+				16B455DE1DA6397400500BCF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,11 +271,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16B455DE1DA6397400500BCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16B455A81DA6367F00500BCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B455E41DA63C2300500BCF /* MixPlayer.swift in Sources */,
 				16B455B21DA6367F00500BCF /* ViewController.swift in Sources */,
 				16B455B01DA6367F00500BCF /* AppDelegate.swift in Sources */,
 			);
@@ -401,6 +440,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MixPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayer;
@@ -412,6 +455,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MixPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byaji.MixPlayer;
