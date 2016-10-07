@@ -54,13 +54,15 @@ class MixPlayer : UIView {
 
     private var disposables = CompositeDisposable()
 
-    private var enableToReload : Bool = true
+    private var needToLoad : Bool = true
+    private var dataDidLoad : Bool = false
     private var httpRequestEtag : String? {
         didSet (oldValue) {
             if oldValue == httpRequestEtag || status.value == .Playing {
-                enableToReload = false
+
+                needToLoad = false
             } else {
-                enableToReload = true
+                needToLoad = true
             }
         }
     }
@@ -78,12 +80,14 @@ class MixPlayer : UIView {
         setup()
         setupPlayerStateMachine()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     private func setup() {
+        addSubview(logoImgView)
+
         player = AVPlayer()
         playerLayer = AVPlayerLayer()
         playerLayer?.player = player
@@ -101,12 +105,9 @@ class MixPlayer : UIView {
             print("AudioSession Error")
         }
 
-        addSubview(logoImgView)
         blackView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         blackView.hidden = true
         addSubview(blackView)
-
-        showIndicatorMain()
     }
 
     private func showIndicatorMain() {
@@ -137,9 +138,13 @@ class MixPlayer : UIView {
     }
 
     private func dismissIndicator() {
-        if self.indicator.isAnimating() {
-            self.indicator.stopAnimating()
-            self.sendSubviewToBack(self.indicator)
+        dispatch_async(dispatch_get_main_queue()) { [weak self] in
+            if let wself = self {
+                if wself.indicator.isAnimating() {
+                    wself.indicator.stopAnimating()
+                    wself.sendSubviewToBack(wself.indicator)
+                }
+            }
         }
     }
 
@@ -147,23 +152,28 @@ class MixPlayer : UIView {
         disposables += timer(2, onScheduler: QueueScheduler()).startWithNext({ [weak self] _ in
             if let wself = self {
                 wself.getLiveHttpRequestEtag(wself.url)
-                print("ETAG: \(wself.httpRequestEtag) | EL: \(wself.enableToReload) | ST: \(wself.status.value.rawValue)")
+                print("ETAG: \(wself.httpRequestEtag) | EL: \(wself.needToLoad) | ST: \(wself.status.value.rawValue)")
                 let likelyToKeepUp = wself.playerItem?.playbackLikelyToKeepUp ?? false
                 let playItemStatus = wself.playerItem?.status ?? .Unknown
 
                 switch wself.status.value {
                 case .Loading :
-                    if likelyToKeepUp && playItemStatus == .ReadyToPlay && wself.enableToReload {
+                    if likelyToKeepUp && playItemStatus == .ReadyToPlay && wself.dataDidLoad {
+                        wself.dismissIndicator()
                         wself.player?.play()
                         wself.status.swap(.Playing)
                     } else {
-                        wself.loadPlayerItem()
+                        wself.showIndicatorMain()
+                        if wself.needToLoad {
+                            wself.loadPlayerItem()
+                        }
                     }
                 case .Failed :
                     break
                 case .Playing :
-                    if !likelyToKeepUp {
+                    if !likelyToKeepUp || wself.needToLoad {
                         wself.status.swap(.Loading)
+                        wself.dataDidLoad = false
                     }
                 case .Paused :
                     break
@@ -171,16 +181,15 @@ class MixPlayer : UIView {
                     break
                 }
             }
-        })
+            })
     }
 
     func loadPlayerItem() {
-        status.swap(.Loading)
-        guard enableToReload else {
+        print("called")
+        guard needToLoad else {
             return
         }
 
-        print("relaoded")
         NSNotificationCenter.defaultCenter().removeObserver(self)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(sessionDidInterrupt), name: AVAudioSessionRouteChangeNotification, object: nil)
 
@@ -190,9 +199,10 @@ class MixPlayer : UIView {
         player?.replaceCurrentItemWithPlayerItem(playerItem)
 
         if playerItem != nil {
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(loadPlayerItem), name:
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reload), name:
                 AVPlayerItemFailedToPlayToEndTimeNotification, object: playerItem!)
         }
+        dataDidLoad = true
     }
 
     func sessionDidInterrupt() {
@@ -273,7 +283,12 @@ class MixPlayer : UIView {
     }
 
     func reload() {
+        dataDidLoad = false
         status.swap(.Loading)
+    }
+
+    func stop() {
+        status.swap(.End)
     }
 
     func screenShotFromPlayer() -> UIImage? {
