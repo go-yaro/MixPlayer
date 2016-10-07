@@ -17,6 +17,7 @@
 		16B455E11DA63BF500500BCF /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B455DF1DA63BF500500BCF /* ReactiveCocoa.framework */; };
 		16B455E21DA63BF500500BCF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B455E01DA63BF500500BCF /* Result.framework */; };
 		16B455E41DA63C2300500BCF /* MixPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B455E31DA63C2300500BCF /* MixPlayer.swift */; };
+		16B455E61DA73E8400500BCF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B455E51DA73E8400500BCF /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		16B455DF1DA63BF500500BCF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		16B455E01DA63BF500500BCF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		16B455E31DA63C2300500BCF /* MixPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixPlayer.swift; sourceTree = "<group>"; };
+		16B455E51DA73E8400500BCF /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B455E61DA73E8400500BCF /* SnapKit.framework in Frameworks */,
 				16B455E11DA63BF500500BCF /* ReactiveCocoa.framework in Frameworks */,
 				16B455E21DA63BF500500BCF /* Result.framework in Frameworks */,
 			);
@@ -138,6 +141,7 @@
 		16B455DD1DA6391400500BCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16B455E51DA73E8400500BCF /* SnapKit.framework */,
 				16B455DF1DA63BF500500BCF /* ReactiveCocoa.framework */,
 				16B455E01DA63BF500500BCF /* Result.framework */,
 			);
@@ -280,6 +284,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputPaths = (
 			);
@@ -531,6 +536,7 @@
 				16B455D61DA6367F00500BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16B455D71DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +545,7 @@
 				16B455D91DA6367F00500BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16B455DA1DA6367F00500BCF /* Build configuration list for PBXNativeTarget "MixPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +554,7 @@
 				16B455DC1DA6367F00500BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
